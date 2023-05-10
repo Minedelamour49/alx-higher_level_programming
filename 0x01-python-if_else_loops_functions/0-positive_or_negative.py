@@ -1,11 +1,16 @@
 
 #!/usr/bin/python3
-
 import random
-number = random.randint(-10,10)
+
+# Generate a random integer between -100 and 100 (inclusive)
+number = random.randint(-100, 100)
+
+# Check if the number is positive, negative, or zero, and print the appropriate message
 if number > 0:
-print("{} is positive".format(number))
+    print(number, "is positive")
 elif number == 0:
-print("{} is zero".format(number))
+    print(number, "is zero")
 else:
-print("{} is negative".format(number))
+    print(number, "is negative")
+
+print()
