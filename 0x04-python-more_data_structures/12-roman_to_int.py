@@ -1,7 +1,7 @@
 def roman_to_int(roman_string):
-    if not isinstance(roman_string, str) or roman_string is None:
+    if roman_string is None or not isinstance(roman_string, str):
         return 0
-    
+
     roman_values = {
         'I': 1,
         'V': 5,
@@ -11,14 +11,22 @@ def roman_to_int(roman_string):
         'D': 500,
         'M': 1000
     }
-    
+
     result = 0
-    n = len(roman_string)
-    
-    for i in range(n-1, -1, -1):
-        if i == n-1 or roman_values[roman_string[i]] >= roman_values[roman_string[i+1]]:
-            result += roman_values[roman_string[i]]
+    prev_value = 0
+
+    for char in roman_string:
+        if char not in roman_values:
+            return 0
+
+        value = roman_values[char]
+
+        if value > prev_value:
+            result += value - 2 * prev_value
         else:
-            result -= roman_values[roman_string[i]]
-    
+            result += value
+
+        prev_value = value
+
     return result
+
