@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+
 def square_matrix_simple(matrix=[]):
-    new_matrix = matrix.copy()
-
-    for i in range(len(matrix)):
-        new_matrix[i] = list(map(lambda x: x**2, matrix[i]))
-
-    return (new_matrix)
+    """Computes the square value of all integers in a matrix"""
+    new_matrix = []
+    for row in matrix:
+        new_row = [num ** 2 for num in row]
+        new_matrix.append(new_row)
+    return new_matrix
 
