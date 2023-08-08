@@ -4,7 +4,7 @@ import random
 
 number = random.randint(-10, 10)
 
-print(number, "is" , end=" ")
+print(number, "is", end="")
 
 if number > 0:
     print("positive")
