@@ -2,13 +2,11 @@
 
 import random
 
-number = random.randint(-10, 10)
-
-print("The number is:", number)
+number = random.randint(-10, 10)      
 
 if number > 0:
-    print("if the number is greater than 0:", "is positive")
+    print("{} is positive" .format(number))
 elif number == 0:
-    print("if the number is 0:", "is zero")
+    print("{} is zero" .format(number))
 else:
-    print("if the number is less than 0:", "is negative")
+    print("{} is negative" .format(number)\n)
