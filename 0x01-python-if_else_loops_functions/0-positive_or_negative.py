@@ -4,11 +4,9 @@ import random
 
 number = random.randint(-10, 10)
 
-print(number, "is", end="")
-
 if number > 0:
-    print("positive")
+    print("{} is postive".format(number))
 elif number == 0:
-    print("zero")
+    print("{} is zero".format(number))
 else:
-    print("negative")
+    print("{} is negative".format(number))
