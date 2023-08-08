@@ -12,5 +12,3 @@ elif number == 0:
     print("if the number is 0:", "is zero")
 else:
     print("if the number is less than 0:", "is negative")
-
-print()
